@@ -15,7 +15,7 @@ class ProdutoController extends Controller
                 'nome' => $produto->nome,
                 'preco' => $produto->preco,
                 'ingredientes' => $produto-> ingredientes,
-                'image' => asset('store/' . $produto->image),
+                'imagem' => asset('storage/' . $produto->imagem),
             ];
         });
 
@@ -27,9 +27,9 @@ class ProdutoController extends Controller
         $produtoData = $request->all();
 
         if ($request->hasFile('imagem')){
-            $imagem = $request->file('imagem');
-            $nomeImagem = time().'.'.$imagem->getClientOriginalExtension();
-            $caminhoImagem = $imagem->storeAs('imagens/produtos', $nomeImagem, 'public');
+            $image= $request->file('imagem');
+            $nomeImagem = time().'.'.$image->getClientOriginalExtension();
+            $caminhoImagem = $image->storeAs('imagens/produtos', $nomeImagem, 'public');
             $produtoData[ 'imagem' ] = $caminhoImagem;
 
         }

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email', 120)->nullable(false);
             $table->string('senha')->nullable(false);
             $table->string('telefone', 11)->nullable(false);
+            $table->string('cpf', 11)->nullable(false);
             $table->string('endereco', 100)->nullable(false);
             $table->string('imagem')->nullable(false);
 

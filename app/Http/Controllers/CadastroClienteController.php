@@ -16,6 +16,7 @@ class CadastroClienteController extends Controller
                 'email' => $clientes->email,
                 'senha' => $clientes-> senha,
                 'telefone' => $clientes-> telefone,
+                'cpf' => $clientes-> cpf,
                 'endereco' => $clientes-> endereco,
                 'imagem' => asset('store/' . $clientes->image),
             ];

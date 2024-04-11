@@ -29,6 +29,7 @@ class ClientesFormRequest extends FormRequest
             'email'=> 'required|max:120|email|unique:clientes,email',
             'senha'=>'required',
             'telefone' => 'required|max:11|min:10',
+            'cpf' => 'required|max:11',
             'endereco'=>'required|max:120',
             'imagem' => 'required'
             
@@ -46,16 +47,18 @@ class ClientesFormRequest extends FormRequest
         return [
             'nome.required'=> 'O campo nome é obrigatorio',
             'nome.max' => 'o campo nome deve conter no maximo 120 caracteres',
-            'telefone.required' =>'Telefone obrigatoria',
-            'telefone.max' => 'Telefone deve conter no maximo 11 caracteres',
-            'telefone.min' => 'Telefone deve conter no minimo 10 caracteres',
             'email.max' => 'Email deve conter no maximo 120 caracteres',
             'email.required' => 'Email obrigatorio',
             'email.unique'=> 'Email ja cadastrado no sistema',
             'email.email'=> 'Formato invalido',
+            'senha.required' =>'Senha obrigatorio',
+            'telefone.required' =>'Telefone obrigatoria',
+            'telefone.max' => 'Telefone deve conter no maximo 11 caracteres',
+            'telefone.min' => 'Telefone deve conter no minimo 10 caracteres',
+            'cpf.max' => 'CPF deve conter no maximo 11 caracteres',
             'endereco.required' =>' Endereço obrigatorio',
             'endereco.max' => 'Endereço deve conter no maximo 120 caracteres',
-            'senha.required' =>'Senha obrigatorio',
+            
          
            
     

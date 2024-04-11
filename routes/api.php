@@ -6,6 +6,7 @@ use App\Models\Produto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/produto', [ProdutoController:: class, 'index']);
+Route::post('/produto', [ProdutoController:: class, 'store']);
+Route::get('produtoIndex',[ProdutoController::class,'index']);
 
-Route::post('/clientes', [CadastroClienteController::class, 'store']);
+Route::post('CadastrarCliente', [CadastroClienteController::class, 'store']);
